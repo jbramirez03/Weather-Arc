@@ -11,3 +11,11 @@ body {
 .container {
   width: 100%;
 }
+
+.weather-grid {
+  display: grid;
+  grid-template-areas:
+    ". . current . ."
+    "D-one D-two D-three D-four D-Five"
+    ". . footer . .";
+}
