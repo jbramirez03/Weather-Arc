@@ -14,6 +14,7 @@ body {
 
 .weather-grid {
   display: grid;
+  width: 100%;
   grid-template-areas:
     ". . current . ."
     "D-one D-two D-three D-four D-Five"
