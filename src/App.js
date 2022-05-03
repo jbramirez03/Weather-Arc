@@ -6,9 +6,11 @@ import Grid from './components/Grid';
 
 function App() {
   return (
-    <main>
-      <Grid />
-    </main>
+    <div className='container'>
+      <main className='main'>
+        <Grid />
+      </main>
+    </div>
 
   );
 }
