@@ -1,8 +1,15 @@
 import './App.css';
+import Grid from './components/Grid';
+
+
+
 
 function App() {
   return (
-    <div>Hello World</div>
+    <main>
+      <Grid />
+    </main>
+
   );
 }
 
