@@ -14,9 +14,19 @@ body {
 
 .weather-grid {
   display: grid;
+  padding: 10px;
+  gap: 10px;
   width: 100%;
+  grid-template-areas: "D-one D-two D-three D-four D-Five";
+}
+
+.weather-article {
+  display: grid;
+  padding: 10px;
+  gap: 1rem;
   grid-template-areas:
-    ". . current . ."
-    "D-one D-two D-three D-four D-Five"
-    ". . footer . .";
+    "date"
+    "temp"
+    "wind"
+    "humidity";
 }
