@@ -17,7 +17,28 @@ body {
   padding: 10px;
   gap: 10px;
   width: 100%;
-  grid-template-areas: "D-one D-two D-three D-four D-Five";
+  grid-template-areas:
+    "D-one"
+    "D-two"
+    "D-three"
+    "D-four"
+    "D-five";
+}
+
+.weather-grid:nth-child(1) {
+  grid-area: D-one;
+}
+.weather-grid:nth-child(2) {
+  grid-area: D-two;
+}
+.weather-grid:nth-child(3) {
+  grid-area: D-three;
+}
+.weather-grid:nth-child(4) {
+  grid-area: D-four;
+}
+.weather-grid:nth-child(5) {
+  grid-area: D-five;
 }
 
 .weather-article {
@@ -29,4 +50,19 @@ body {
     "temp"
     "wind"
     "humidity";
+}
+
+@media screen and (min-width: 35em) {
+  .weather-grid {
+    grid-template-areas:
+      "D-one D-two"
+      "D-three D-four"
+      "D-five D-five";
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .weather-grid {
+    grid-template-areas: "D-one D-two D-three D-four D-five";
+  }
 }
