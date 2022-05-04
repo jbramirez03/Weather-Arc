@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Article from './Article';
+import CurrentDay from './CurrentDay';
 
 const Grid = () => {
     const [articles, setArticles] = useState([
@@ -9,6 +10,7 @@ const Grid = () => {
 
     return (
         <div className='weather-grid'>
+            <CurrentDay />
             {articles.map(article => (
                 <Article key={article} />
             ))}
