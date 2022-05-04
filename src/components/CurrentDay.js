@@ -4,10 +4,10 @@ const CurrentDay = () => {
     return (
         <article className="currentDay">
             <h1>Today's weather: </h1>
-            <h3>date</h3>
-            <p>temp</p>
-            <p>wind</p>
-            <p>humidity</p>
+            <h3>Date</h3>
+            <p>Temp:</p>
+            <p>Wind:</p>
+            <p>Humidity:</p>
         </article>
     )
 }

@@ -4,9 +4,9 @@ const Article = () => {
     return (
         <article className="weather-article">
             <h2>Date</h2>
-            <p>temp</p>
-            <p>wind</p>
-            <p>humidity</p>
+            <p>Temp:</p>
+            <p>Wind:</p>
+            <p>Humidity:</p>
         </article>
     )
 }
