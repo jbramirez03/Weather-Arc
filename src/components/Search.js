@@ -5,11 +5,8 @@ const Search = () => {
     return (
         <div className='search'>
             <form action="submit" className='search-form'>
-                <label>
-                    <input type="text" className='search' id='search' placeholder='Search here' />
-                    <button><RiSearchLine className='search-icon' /></button>
-                </label>
-
+                <input type="text" className='search' id='search' placeholder='Search here' />
+                <button><RiSearchLine className='search-icon' /></button>
             </form>
         </div>
     )

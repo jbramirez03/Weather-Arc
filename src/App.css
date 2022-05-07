@@ -12,6 +12,16 @@ body {
   width: 100%;
 }
 
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+}
+
 .weather-grid {
   display: grid;
   padding: 10px;
