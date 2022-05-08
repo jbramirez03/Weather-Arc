@@ -74,6 +74,12 @@ body {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
   display: grid;
   justify-content: center;
   padding: 1.5rem;
@@ -85,6 +91,8 @@ body {
 
 .links {
   grid-area: links;
+  display: flex;
+  justify-content: center;
 }
 
 .copyright {
