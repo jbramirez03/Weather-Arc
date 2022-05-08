@@ -179,7 +179,6 @@ body {
 
 .footer {
   position: absolute;
-  bottom: 0;
   width: 100%;
 }
 
@@ -211,6 +210,10 @@ body {
       "D-three D-four"
       "D-five D-five";
   }
+
+  .footer {
+    bottom: 0;
+  }
 }
 
 @media screen and (min-width: 60em) {
@@ -218,5 +221,9 @@ body {
     grid-template-areas:
       "current current current current current"
       "D-one D-two D-three D-four D-five";
+  }
+
+  .footer {
+    bottom: 0;
   }
 }
