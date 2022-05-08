@@ -24,7 +24,7 @@ body {
 }
 
 .weather-grid {
-  margin: 5rem 0.5rem;
+  margin: 5rem 0;
   display: grid;
   padding: 10px;
   gap: 10px;
@@ -43,7 +43,10 @@ body {
   display: grid;
   justify-content: center;
   gap: 10px;
-  padding: 10px;
+  padding: 1.5rem;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
 }
 
 .weather-article:nth-child(1) {
@@ -65,13 +68,16 @@ body {
 .weather-article {
   display: grid;
   justify-content: center;
-  padding: 10px;
+  padding: 1.5rem;
   gap: 1rem;
   grid-template-areas:
     "date"
     "temp"
     "wind"
     "humidity";
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
 }
 
 .footer {
