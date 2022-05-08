@@ -24,7 +24,7 @@ body {
 }
 
 .weather-grid {
-  margin: 3rem 0.5rem;
+  margin: 5rem 0.5rem;
   display: grid;
   padding: 10px;
   gap: 10px;
