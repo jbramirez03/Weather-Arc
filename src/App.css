@@ -73,6 +73,16 @@ body {
     "humidity";
 }
 
+.footer {
+  display: grid;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  grid-template-areas:
+    "Links"
+    "copyright";
+}
+
 @media screen and (min-width: 35em) {
   .weather-grid {
     grid-template-areas:
