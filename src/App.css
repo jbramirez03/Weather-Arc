@@ -146,19 +146,19 @@ body {
   border-radius: 20px;
 }
 
-.weather-article:nth-child(1) {
+.weather-article:nth-child(2) {
   grid-area: D-one;
 }
-.weather-article:nth-child(2) {
+.weather-article:nth-child(3) {
   grid-area: D-two;
 }
-.weather-article:nth-child(3) {
+.weather-article:nth-child(4) {
   grid-area: D-three;
 }
-.weather-article:nth-child(4) {
+.weather-article:nth-child(5) {
   grid-area: D-four;
 }
-.weather-article:nth-child(5) {
+.weather-article:nth-child(6) {
   grid-area: D-five;
 }
 
