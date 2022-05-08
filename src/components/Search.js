@@ -11,7 +11,7 @@ const Search = () => {
     return (
         <div className='search-area'>
             <div className='search'>
-                <div className="icon" onClick={handleToggle}></div>
+                <div className={active ? 'icon active' : 'icon'} onClick={handleToggle}></div>
                 <div className="input"></div>
             </div>
         </div>
