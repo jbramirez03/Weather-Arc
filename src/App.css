@@ -142,19 +142,19 @@ body {
   border-radius: 20px;
 }
 
-.weather-article:nth-child(2):hover {
+.weather-article:nth-child(2).active {
   grid-row: span 2;
 }
-.weather-article:nth-child(3):hover {
+.weather-article:nth-child(3).active {
   grid-row: span 2;
 }
-.weather-article:nth-child(4):hover {
+.weather-article:nth-child(4).active {
   grid-row: span 2;
 }
-.weather-article:nth-child(5):hover {
+.weather-article:nth-child(5).active {
   grid-row: span 2;
 }
-.weather-article:nth-child(6):hover {
+.weather-article:nth-child(6).active {
   grid-row: span 2;
 }
 
@@ -211,27 +211,27 @@ body {
     grid-column: span 2;
   }
 
-  .weather-article:nth-child(6):hover {
+  .weather-article:nth-child(6).active {
     grid-row: 4/6;
     grid-column: 2/3;
   }
 
-  .weather-article:nth-child(6):hover ~ .weather-article:nth-child(5) {
+  .weather-article:nth-child(6).active ~ .weather-article:nth-child(5) {
     grid-column: 1/2;
     grid-row: 5/6;
   }
 
-  .weather-article:nth-child(2):hover ~ .weather-article:nth-child(6) {
+  .weather-article:nth-child(2).active ~ .weather-article:nth-child(6) {
     grid-column: 2/3;
   }
 
-  .weather-article:nth-child(3):hover ~ .weather-article:nth-child(6) {
+  .weather-article:nth-child(3).active ~ .weather-article:nth-child(6) {
     grid-column: 2/3;
   }
-  .weather-article:nth-child(4):hover ~ .weather-article:nth-child(6) {
+  .weather-article:nth-child(4).active ~ .weather-article:nth-child(6) {
     grid-column: 2/3;
   }
-  .weather-article:nth-child(5):hover ~ .weather-article:nth-child(6) {
+  .weather-article:nth-child(5).active ~ .weather-article:nth-child(6) {
     grid-column: 1/2;
   }
 }
