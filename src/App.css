@@ -249,7 +249,26 @@ body {
     /* grid-row: 1/2; */
   }
 
-  .weather-article:nth-child(6) {
-    grid-column: 3rem;
+  .weather-article:nth-child(2).active ~ .weather-article:nth-child(6) {
+    grid-row: 4/5;
+    grid-column: 3/4;
+  }
+
+  .weather-article:nth-child(3).active ~ .weather-article:nth-child(6) {
+    grid-row: 4/5;
+    grid-column: 3/4;
+  }
+
+  .weather-article:nth-child(5).active {
+    grid-row: 3/5;
+  }
+  .weather-article:nth-child(5).active ~ .weather-article:nth-child(6) {
+    grid-row: 4/5;
+    grid-column: 3/4;
+  }
+
+  .weather-article:nth-child(6).active {
+    grid-row: 3/5;
+    grid-column: 3/4;
   }
 }
