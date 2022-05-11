@@ -6,14 +6,19 @@ const Article = ({ identifier }) => {
     const handleSetActive = (article) => {
         const articles = document.querySelectorAll('.weather-article');
         const currentArticle = article;
-        console.log(currentArticle);
+
+        if (currentArticle.className === 'weather-article') {
+            currentArticle.className = 'weather-article active';
+            console.log(true);
+        }
+        else {
+            currentArticle.className = 'weather-article';
+        }
+
         for (let index = 0; index < articles.length; index++) {
             const element = articles[index];
             if (element !== currentArticle)
                 element.className = 'weather-article';
-            else {
-                element.className = 'weather-article active';
-            }
         }
 
     }
