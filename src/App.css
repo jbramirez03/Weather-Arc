@@ -161,8 +161,8 @@ body {
 .weather-article {
   display: grid;
   justify-content: center;
-  padding: 1.5rem;
-  gap: 1rem;
+  padding: 1rem;
+  gap: 0.25rem;
   grid-template-areas:
     "date"
     "temp"
@@ -171,6 +171,7 @@ body {
   background: #fff;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .weather-article .img-block {
@@ -185,6 +186,14 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.weather-article .weather-details {
+  transform: translateY(150px);
+}
+
+.weather-article.active .weather-details {
+  transform: translateY(0);
 }
 
 .footer {
@@ -260,29 +269,29 @@ body {
 
   .currentDay {
     grid-column: span 3;
-    /* grid-row: 1/2; */
+    grid-row: 1/2;
   }
 
   .weather-article:nth-child(2).active ~ .weather-article:nth-child(6) {
-    grid-row: 4/5;
+    grid-row: 3/4;
     grid-column: 3/4;
   }
 
   .weather-article:nth-child(3).active ~ .weather-article:nth-child(6) {
-    grid-row: 4/5;
+    grid-row: 3/4;
     grid-column: 3/4;
   }
 
   .weather-article:nth-child(5).active {
-    grid-row: 3/5;
+    grid-row: 2/4;
   }
   .weather-article:nth-child(5).active ~ .weather-article:nth-child(6) {
-    grid-row: 4/5;
+    grid-row: 3/4;
     grid-column: 3/4;
   }
 
   .weather-article:nth-child(6).active {
-    grid-row: 3/5;
+    grid-row: 2/4;
     grid-column: 3/4;
   }
 }

@@ -2,12 +2,10 @@
 
 const Article = () => {
 
-    const handleSetActive = (article) => {
+    const handleSetActive = (currentArticle) => {
         const articles = document.querySelectorAll('.weather-article');
-        const currentArticle = article;
-        console.log(article.parentElement);
 
-        if (article.parentElement.className === 'weather-article' || article.parentElement.className === 'weather-article active')
+        if (currentArticle.parentElement.className === 'weather-article' || currentArticle.parentElement.className === 'weather-article active')
             return;
 
         if (currentArticle.className === 'weather-article') {
@@ -27,12 +25,14 @@ const Article = () => {
 
     return (
         <article className='weather-article' onClick={(e) => e.target.parentElement.className === 'weather-grid' ? handleSetActive(e.target) : handleSetActive(e.target.parentElement)}>
-            {/* <h2>Date</h2>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p> */}
             <div className="img-block">
                 <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" />
+            </div>
+            <div className="weather-details">
+                <h2>Date</h2>
+                <p>Temp:</p>
+                <p>Wind:</p>
+                <p>Humidity:</p>
             </div>
         </article>
     )
