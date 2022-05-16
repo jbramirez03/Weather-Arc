@@ -10,7 +10,7 @@ const Grid = () => {
         <div className='weather-grid'>
             <CurrentDay />
             {articles.map(article => (
-                <Article key={article.day} identifier={article.key} />
+                <Article key={article.day} />
             ))}
         </div>
     )

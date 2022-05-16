@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 
-const Article = ({ identifier }) => {
-    const [active, setActive] = useState(false);
+const Article = () => {
 
     const handleSetActive = (article) => {
         const articles = document.querySelectorAll('.weather-article');
@@ -23,26 +22,13 @@ const Article = ({ identifier }) => {
 
     }
 
-    const handleNewClick = () => {
-        const filtered = [];
-        active ? setActive(false) : setActive(true);
-        const articles = document.querySelectorAll('.weather-article');
-        const currentArticle = articles[identifier];
-        for (let i = 0; i < articles.length; i++) {
-            if (articles[i] !== currentArticle) {
-
-            }
-        }
-
-    }
-
-
     return (
         <article className='weather-article' onClick={(e) => e.target.parentElement.className === 'weather-grid' ? handleSetActive(e.target) : handleSetActive(e.target.parentElement)}>
-            <h2>Date</h2>
+            {/* <h2>Date</h2>
             <p>Temp:</p>
             <p>Wind:</p>
-            <p>Humidity:</p>
+            <p>Humidity:</p> */}
+            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" />
         </article>
     )
 }
