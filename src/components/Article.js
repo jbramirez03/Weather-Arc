@@ -5,12 +5,15 @@ const Article = () => {
     const handleSetActive = (article) => {
         const articles = document.querySelectorAll('.weather-article');
         const currentArticle = article;
+        console.log(article.parentElement);
+
+        if (article.parentElement.className === 'weather-article' || article.parentElement.className === 'weather-article active')
+            return;
 
         if (currentArticle.className === 'weather-article') {
             currentArticle.className = 'weather-article active';
-            console.log(true);
-        }
-        else {
+
+        } else {
             currentArticle.className = 'weather-article';
         }
 
@@ -28,7 +31,9 @@ const Article = () => {
             <p>Temp:</p>
             <p>Wind:</p>
             <p>Humidity:</p> */}
-            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" />
+            <div className="img-block">
+                <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" />
+            </div>
         </article>
     )
 }
