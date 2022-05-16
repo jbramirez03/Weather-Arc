@@ -159,15 +159,12 @@ body {
 }
 
 .weather-article {
-  display: grid;
-  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   padding: 1rem;
-  gap: 0.25rem;
-  grid-template-areas:
-    "date"
-    "temp"
-    "wind"
-    "humidity";
   background: #fff;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 15px;
@@ -193,7 +190,7 @@ body {
 }
 
 .weather-article.active .weather-details {
-  transform: translateY(0);
+  transform: translateY(40px);
 }
 
 .footer {
