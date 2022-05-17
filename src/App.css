@@ -185,7 +185,7 @@ body {
 }
 
 .weather-details {
-  transform: translateY(80px);
+  transform: translateY(90px);
 }
 
 .weather-details h2 {
