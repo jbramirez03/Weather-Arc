@@ -188,6 +188,10 @@ body {
   transform: translateY(70px);
 }
 
+.weather-details h2 {
+  margin-bottom: 1rem;
+}
+
 .weather-article.active .weather-details {
   transform: translateY(40px);
 }
