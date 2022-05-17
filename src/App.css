@@ -196,6 +196,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.weather-article.active .weather-details p {
+  margin-bottom: 4rem;
+}
+
 .footer {
   position: absolute;
   width: 100%;
