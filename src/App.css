@@ -185,15 +185,15 @@ body {
 }
 
 .weather-details {
-  transform: translateY(70px);
+  transform: translateY(80px);
 }
 
 .weather-details h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .weather-article.active .weather-details {
-  transform: translateY(40px);
+  /* transform: translateY(80px); */
 }
 
 .weather-article.active .weather-details h2 {
