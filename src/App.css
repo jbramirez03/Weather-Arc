@@ -12,6 +12,7 @@ body {
   width: 100%;
 }
 
+/*/// Search input ///*/
 .search-area {
   display: flex;
   justify-content: center;
@@ -120,6 +121,8 @@ body {
   transform: rotate(315deg);
 }
 
+/*/// Weather Grid ///*/
+
 .weather-grid {
   margin: 5rem 0;
   display: grid;
@@ -131,11 +134,11 @@ body {
   grid-auto-rows: 1fr;
 }
 
+/*/// Current day weather ///*/
 .currentDay {
   display: grid;
   grid-row: span 2;
   justify-content: center;
-  /* align-items: center; */
   gap: 10px;
   padding: 1.5rem;
   background: #fff;
@@ -163,6 +166,7 @@ body {
   flex-direction: column;
 }
 
+/*/// Daily weather articles ///*/
 .weather-article:nth-child(2).active {
   grid-row: span 2;
 }
@@ -221,6 +225,7 @@ body {
   margin-bottom: 4rem;
 }
 
+/*/// Footer ///*/
 .footer {
   position: absolute;
   width: 100%;
@@ -246,6 +251,7 @@ body {
   grid-area: copyright;
 }
 
+/*/// Adjusting layout of weather grid on different screen sizes ///*/
 @media screen and (min-width: 35em) {
   .weather-grid {
     grid-template-columns: 1fr 1fr;
@@ -294,7 +300,6 @@ body {
 
   .currentDay {
     grid-column: span 3;
-    /* grid-row: 1/2; */
   }
 
   .weather-article:nth-child(2).active ~ .weather-article:nth-child(6) {
@@ -308,15 +313,15 @@ body {
   }
 
   .weather-article:nth-child(5).active {
-    grid-row: 2/4;
+    grid-row: 3/5;
   }
   .weather-article:nth-child(5).active ~ .weather-article:nth-child(6) {
-    grid-row: 3/4;
+    grid-row: 4/5;
     grid-column: 3/4;
   }
 
   .weather-article:nth-child(6).active {
-    grid-row: 2/4;
+    grid-row: 3/5;
     grid-column: 3/4;
   }
 }
