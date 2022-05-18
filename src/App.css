@@ -142,6 +142,26 @@ body {
   border-radius: 20px;
 }
 
+.currentDay .currentDay-img {
+  height: 150px;
+  width: 150px;
+  background: transparent;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+}
+
+.currentDay .currentDay-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.currentDay .currentDay-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 .weather-article:nth-child(2).active {
   grid-row: span 2;
 }
@@ -190,10 +210,6 @@ body {
 
 .weather-details h2 {
   margin-bottom: 2rem;
-}
-
-.weather-article.active .weather-details {
-  /* transform: translateY(80px); */
 }
 
 .weather-article.active .weather-details h2 {
