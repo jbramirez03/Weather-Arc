@@ -1,7 +1,11 @@
-import { useState } from 'react';
-import { RiSearchLine } from 'react-icons/ri';
+import { useState, useReducer } from 'react';
+import { useWeather } from '../utils/WeatherContext';
+import reducer from '../utils/reducers';
+import { UPDATE_CITY } from '../utils/actions';
 
 const Search = () => {
+    const initialState = useWeather();
+    const [state, dispatch] = useReducer(reducer, initialState);
     const [active, setActive] = useState(false);
     const [currentSearch, setCurrentSearch] = useState('');
 
