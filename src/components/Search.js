@@ -1,13 +1,18 @@
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useEffect } from 'react';
 import { useWeather } from '../utils/WeatherContext';
 import reducer from '../utils/reducers';
 import { UPDATE_CITY } from '../utils/actions';
 
 const Search = () => {
+
     const initialState = useWeather();
     const [state, dispatch] = useReducer(reducer, initialState);
     const [active, setActive] = useState(false);
     const [currentSearch, setCurrentSearch] = useState('');
+
+    useEffect(() => {
+        console.log(state);
+    }, [state])
 
     const handleToggle = () => {
         setActive(!active);
@@ -17,11 +22,19 @@ const Search = () => {
         setCurrentSearch('');
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch({
+            type: UPDATE_CITY,
+            city: { name: currentSearch }
+        });
+    }
+
     return (
         <div className='search-area'>
             <div className={active ? 'search active' : 'search'}>
                 <div className='icon' onClick={handleToggle}></div>
-                <form action="submit">
+                <form action="submit" onSubmit={handleSubmit}>
                     <div className="input">
                         <input type="text" placeholder='Search' id='city-search' onChange={e => setCurrentSearch(e.target.value)} value={currentSearch} />
                     </div>
