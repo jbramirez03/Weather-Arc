@@ -1,13 +1,15 @@
-import React, { useContext } from 'react';
+import { useContext, createContext, useState } from 'react';
 
-export const WeatherContext = React.createContext();
+const WeatherContext = createContext();
 
-export const useWeather = () => useContext(WeatherContext);
+export function WeatherProvider(children) {
+    const [cityName, setCityName] = useState('new york');
 
-export default function weatherProvider(props) {
-    const citySearch = {
-        name: 'new york'
-    };
+    const handleSearch = (searchedName) => {
+        setCityName(searchedName)
+    }
 
-    return <WeatherContext.Provider value={{ citySearch }} {...props} />;
+    return <WeatherContext.Provider value={{ cityName, handleSearch }} {...children} />;
 }
+
+export default WeatherContext;

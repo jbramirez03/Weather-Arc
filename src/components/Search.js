@@ -1,18 +1,15 @@
-import { useState, useReducer, useEffect } from 'react';
-import { useWeather } from '../utils/WeatherContext';
-import reducer from '../utils/reducers';
-import { UPDATE_CITY } from '../utils/actions';
+import { useState, useContext, useEffect } from 'react';
+import WeatherContext from '../utils/WeatherContext';
 
 const Search = () => {
-
-    const initialState = useWeather();
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const [active, setActive] = useState(false);
-    const [currentSearch, setCurrentSearch] = useState('');
+    const { cityName, handleSearch } = useContext(WeatherContext);
 
     useEffect(() => {
-        console.log(state.citySearch);
-    }, [state])
+        console.log(cityName);
+    }, [cityName])
+
+    const [active, setActive] = useState(false);
+    const [currentSearch, setCurrentSearch] = useState('');
 
     const handleToggle = () => {
         setActive(!active);
@@ -24,11 +21,7 @@ const Search = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch({
-            type: UPDATE_CITY,
-            city: { name: currentSearch }
-        });
-
+        handleSearch(currentSearch)
         setCurrentSearch('');
     }
 

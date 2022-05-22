@@ -1,4 +1,0 @@
-export const UPDATE_CITY = 'UPDATE_CITY';
-export const UPDATE_LONGITUDE = 'UPDATE_LONGITUDE';
-export const UPDATE_LATITUDE = 'UPDATE_LATITUDE';
-export const UPDATE_DAILY = 'UPDATE_DAILY';
