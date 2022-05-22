@@ -146,6 +146,12 @@ body {
   border-radius: 20px;
 }
 
+.currentDay .currentImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .currentDay .currentDay-img {
   height: 150px;
   width: 150px;
