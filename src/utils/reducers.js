@@ -7,7 +7,7 @@ export default function reducer(state, action) {
 
             return {
                 ...state,
-                city: { ...action.city }
+                citySearch: { ...action.city }
             }
         }
     }

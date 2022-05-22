@@ -11,7 +11,7 @@ const Search = () => {
     const [currentSearch, setCurrentSearch] = useState('');
 
     useEffect(() => {
-        console.log(state);
+        console.log(state.citySearch);
     }, [state])
 
     const handleToggle = () => {
@@ -28,6 +28,8 @@ const Search = () => {
             type: UPDATE_CITY,
             city: { name: currentSearch }
         });
+
+        setCurrentSearch('');
     }
 
     return (
