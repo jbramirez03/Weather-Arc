@@ -21,7 +21,7 @@ const Search = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleSearch(currentSearch)
+        handleSearch(currentSearch);
         setCurrentSearch('');
     }
 

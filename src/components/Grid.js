@@ -1,8 +1,6 @@
 import Article from './Article';
 import CurrentDay from './CurrentDay';
-import { useWeather } from '../utils/WeatherContext';
-import { useEffect } from 'react';
-// import reducer from '../utils/reducers';
+
 
 const Grid = () => {
 
