@@ -1,8 +1,12 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import WeatherContext from "../utils/WeatherContext"
 
 const CurrentDay = () => {
     const { citySearched } = useContext(WeatherContext);
+
+    useEffect(() => {
+        console.log(citySearched);
+    }, [citySearched]);
 
     return (
         <article className="currentDay">
@@ -12,7 +16,7 @@ const CurrentDay = () => {
                 </div>
             </div>
             <div className="currentDay-details">
-                <h1>Weather for: {citySearched.name} </h1>
+                <h1>Weather for: </h1>
                 <h3>Date</h3>
                 <p>Temp:</p>
                 <p>Wind:</p>

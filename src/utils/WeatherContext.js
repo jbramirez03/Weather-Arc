@@ -10,7 +10,7 @@ export function WeatherProvider(children) {
         wind: '',
         humidity: ''
     });
-    const handleSearch = (searchName, searchDate, searchTemp, searchWind, searchHumidity) => {
+    const setToday = (searchName, searchDate, searchTemp, searchWind, searchHumidity) => {
         setCitySearched({
             name: searchName,
             date: searchDate,
@@ -21,7 +21,7 @@ export function WeatherProvider(children) {
     }
 
 
-    return <WeatherContext.Provider value={{ citySearched, handleSearch }} {...children} />;
+    return <WeatherContext.Provider value={{ citySearched, setToday }} {...children} />;
 }
 
 export default WeatherContext;

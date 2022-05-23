@@ -1,9 +1,10 @@
 import { useState, useContext, useEffect } from 'react';
 import WeatherContext from '../utils/WeatherContext';
 import axios from 'axios';
+import moment from 'moment';
 
 const Search = () => {
-    const { citySearched, handleSearch } = useContext(WeatherContext);
+    const { citySearched, setToday } = useContext(WeatherContext);
 
     const [active, setActive] = useState(false);
     const [currentSearch, setCurrentSearch] = useState('');
@@ -20,7 +21,18 @@ const Search = () => {
         const searchedCity = "https://api.openweathermap.org/data/2.5/weather?q=" + currentSearch + "&limit=1&appid=bcf6554b28b8c3bcc30e90eb27275f00"
         try {
             const returnedData = await axios.get(searchedCity);
-            console.log(returnedData)
+            const searchedWeekly = "https://api.openweathermap.org/data/2.5/onecall?lat=" + returnedData.data.coord.lat + "&lon=" + returnedData.data.coord.lon + "&units=imperial&appid=bcf6554b28b8c3bcc30e90eb27275f00";
+            const returnedWeeklyData = await axios.get(searchedWeekly);
+            const todayData = returnedWeeklyData.data.current;
+            setToday(
+                returnedData.data.name,
+                moment.unix(todayData.dt).format("MM/DD/YYYY"),
+                todayData.temp,
+                todayData.wind_speed,
+                todayData.humidity
+            );
+            console.log(returnedData);
+            console.log(returnedWeeklyData);
         } catch (error) {
             throw new error
         }
