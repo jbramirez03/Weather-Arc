@@ -2,7 +2,7 @@ import { useContext } from "react"
 import WeatherContext from "../utils/WeatherContext"
 
 const CurrentDay = () => {
-    const { cityName } = useContext(WeatherContext);
+    const { citySearched } = useContext(WeatherContext);
 
     return (
         <article className="currentDay">
@@ -12,7 +12,7 @@ const CurrentDay = () => {
                 </div>
             </div>
             <div className="currentDay-details">
-                <h1>Weather for: {cityName} </h1>
+                <h1>Weather for: {citySearched.name} </h1>
                 <h3>Date</h3>
                 <p>Temp:</p>
                 <p>Wind:</p>

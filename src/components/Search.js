@@ -1,12 +1,9 @@
 import { useState, useContext, useEffect } from 'react';
 import WeatherContext from '../utils/WeatherContext';
+import axios from 'axios';
 
 const Search = () => {
-    const { cityName, handleSearch } = useContext(WeatherContext);
-
-    useEffect(() => {
-        console.log(cityName);
-    }, [cityName])
+    const { citySearched, handleSearch } = useContext(WeatherContext);
 
     const [active, setActive] = useState(false);
     const [currentSearch, setCurrentSearch] = useState('');
@@ -19,11 +16,22 @@ const Search = () => {
         setCurrentSearch('');
     }
 
+    const searchHandler = async () => {
+        const searchedCity = "https://api.openweathermap.org/data/2.5/weather?q=" + currentSearch + "&limit=1&appid=bcf6554b28b8c3bcc30e90eb27275f00"
+        try {
+            const returnedData = await axios.get(searchedCity);
+            console.log(returnedData)
+        } catch (error) {
+            throw new error
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleSearch(currentSearch);
+        searchHandler();
         setCurrentSearch('');
     }
+
 
     return (
         <div className='search-area'>

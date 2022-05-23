@@ -3,13 +3,25 @@ import { createContext, useState } from 'react';
 const WeatherContext = createContext();
 
 export function WeatherProvider(children) {
-    const [cityName, setCityName] = useState('new york');
-
-    const handleSearch = (searchedName) => {
-        setCityName(searchedName)
+    const [citySearched, setCitySearched] = useState({
+        name: 'New York',
+        date: '',
+        temp: '',
+        wind: '',
+        humidity: ''
+    });
+    const handleSearch = (searchName, searchDate, searchTemp, searchWind, searchHumidity) => {
+        setCitySearched({
+            name: searchName,
+            date: searchDate,
+            temp: searchTemp,
+            wind: searchWind,
+            humidity: searchHumidity
+        });
     }
 
-    return <WeatherContext.Provider value={{ cityName, handleSearch }} {...children} />;
+
+    return <WeatherContext.Provider value={{ citySearched, handleSearch }} {...children} />;
 }
 
 export default WeatherContext;
