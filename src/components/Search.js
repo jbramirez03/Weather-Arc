@@ -29,7 +29,8 @@ const Search = () => {
                 moment.unix(todayData.dt).format("MM/DD/YYYY"),
                 todayData.temp,
                 todayData.wind_speed,
-                todayData.humidity
+                todayData.humidity,
+                "https://openweathermap.org/img/wn/" + todayData.weather[0].icon + "@2x.png"
             );
             console.log(returnedData);
             console.log(returnedWeeklyData);

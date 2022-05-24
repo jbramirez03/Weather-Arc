@@ -4,19 +4,21 @@ const WeatherContext = createContext();
 
 export function WeatherProvider(children) {
     const [citySearched, setCitySearched] = useState({
-        name: 'New York',
+        name: '',
         date: '',
         temp: '',
         wind: '',
-        humidity: ''
+        humidity: '',
+        image: ''
     });
-    const setToday = (searchName, searchDate, searchTemp, searchWind, searchHumidity) => {
+    const setToday = (searchName, searchDate, searchTemp, searchWind, searchHumidity, searchImage) => {
         setCitySearched({
             name: searchName,
             date: searchDate,
             temp: searchTemp,
             wind: searchWind,
-            humidity: searchHumidity
+            humidity: searchHumidity,
+            image: searchImage
         });
     }
 
