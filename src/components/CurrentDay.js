@@ -2,11 +2,14 @@ import { useContext, useEffect } from "react"
 import WeatherContext from "../utils/WeatherContext"
 
 const CurrentDay = () => {
-    const { citySearched } = useContext(WeatherContext);
+    const { citySearched, searchHandler } = useContext(WeatherContext);
 
     useEffect(() => {
+        if (citySearched.name === '')
+            searchHandler('New York');
         console.log(citySearched);
     }, [citySearched]);
+
 
     return (
         <article className="currentDay">

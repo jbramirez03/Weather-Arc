@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import WeatherContext from '../utils/WeatherContext';
-import axios from 'axios';
-import moment from 'moment';
+
 
 const Search = () => {
     const { searchHandler } = useContext(WeatherContext);
