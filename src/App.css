@@ -214,6 +214,42 @@ body {
   margin-bottom: 30px;
 }
 
+.currentDay-skeleton .currentImage-skeleton,
+.currentDay-skeleton .details-skeleton h1 {
+  background: linear-gradient(
+    120deg,
+    #e5e5e5 30%,
+    #f0f0f0 38%,
+    #f0f0f0 40%,
+    #e5e5e5 48%
+  );
+
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load 2s infinite;
+}
+
+.currentDay-skeleton .details-skeleton h3,
+.currentDay-skeleton .details-skeleton p {
+  background: linear-gradient(
+    120deg,
+    #e5e5e5 30%,
+    #f0f0f0 38%,
+    #f0f0f0 40%,
+    #e5e5e5 48%
+  );
+
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: load 2s infinite;
+}
+
+@keyframes load {
+  100% {
+    background-position: -100% 0;
+  }
+}
+
 /*/// Daily weather articles ///*/
 .weather-article:nth-child(2).active {
   grid-row: span 2;
