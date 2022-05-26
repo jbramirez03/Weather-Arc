@@ -39,8 +39,8 @@ export function WeatherProvider(children) {
                 todayData.humidity,
                 "https://openweathermap.org/img/wn/" + todayData.weather[0].icon + "@2x.png"
             );
-            console.log(returnedData);
-            console.log(returnedWeeklyData);
+            // console.log(returnedData);
+            // console.log(returnedWeeklyData);
         } catch (error) {
             console.log(error)
         }
