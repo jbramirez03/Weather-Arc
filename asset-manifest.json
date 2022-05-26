@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Weather-Arc/static/css/main.424992e3.css",
-    "main.js": "/Weather-Arc/static/js/main.80dc1466.js",
+    "main.css": "/Weather-Arc/static/css/main.927db9dc.css",
+    "main.js": "/Weather-Arc/static/js/main.82c2c7dc.js",
     "index.html": "/Weather-Arc/index.html",
-    "main.424992e3.css.map": "/Weather-Arc/static/css/main.424992e3.css.map",
-    "main.80dc1466.js.map": "/Weather-Arc/static/js/main.80dc1466.js.map"
+    "main.927db9dc.css.map": "/Weather-Arc/static/css/main.927db9dc.css.map",
+    "main.82c2c7dc.js.map": "/Weather-Arc/static/js/main.82c2c7dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.424992e3.css",
-    "static/js/main.80dc1466.js"
+    "static/css/main.927db9dc.css",
+    "static/js/main.82c2c7dc.js"
   ]
 }
