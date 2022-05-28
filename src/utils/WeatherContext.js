@@ -14,7 +14,7 @@ export function WeatherProvider(children) {
         image: ''
     });
 
-    const [weeklySearched, setWeeklySearched] = useState([]);
+    const [weeklySearched, setWeeklySearched] = useState('');
 
     const setToday = (searchName, searchDate, searchTemp, searchWind, searchHumidity, searchImage) => {
         setCitySearched({
@@ -49,14 +49,16 @@ export function WeatherProvider(children) {
             );
 
             const dailyData = [];
+            console.log(returnedWeeklyData);
 
-            for (let index = 0; index < 6; index++) {
+            for (let index = 0; index < 5; index++) {
                 const day = weeklyData[index + 1];
                 const dayData = {
                     date: moment.unix(day.dt).format('MM/DD/YYYY'),
                     temp: day.temp.max,
                     wind: day.wind_speed,
-                    humidity: day.humidity
+                    humidity: day.humidity,
+                    icon: "https://openweathermap.org/img/wn/" + day.weather[0].icon + "@2x.png"
                 }
                 dailyData.push(dayData);
             }
