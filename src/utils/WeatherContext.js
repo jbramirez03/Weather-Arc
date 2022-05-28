@@ -47,17 +47,19 @@ export function WeatherProvider(children) {
                 todayData.humidity,
                 "https://openweathermap.org/img/wn/" + todayData.weather[0].icon + "@2x.png"
             );
-            // console.log(returnedData);
-            console.log(returnedWeeklyData);
 
-            const dailyData = weeklyData.map(day => {
-                return {
+            const dailyData = [];
+
+            for (let index = 0; index < 6; index++) {
+                const day = weeklyData[index + 1];
+                const dayData = {
                     date: moment.unix(day.dt).format('MM/DD/YYYY'),
                     temp: day.temp.max,
                     wind: day.wind_speed,
                     humidity: day.humidity
                 }
-            });
+                dailyData.push(dayData);
+            }
 
             setWeekly(dailyData);
             console.log(dailyData);
