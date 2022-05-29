@@ -8,9 +8,11 @@
 
 ## Summary
 
+Front-end application with react that handles searching for weather information for any given city in the United States, searches are down through a weather api that returns current weather data and daily data for the next week. This application utilizes responsive-web-design principles in order to keep a good user interface and allow usage on any device that uses the web.
+
 ## Table of Contents
 
-- [Usage](#usage)
+- [Functionality](#functionality)
 - [Credits](#credits)
 - [License](#license)
 - [Challenges](#challenges)
@@ -20,9 +22,19 @@
 - [Questions](#questions)
 - [Link](#link)
 
-## Usage
-
 ## Functionality
+
+### Searching
+
+![React App](https://user-images.githubusercontent.com/82244776/170883735-21211e53-ac06-46be-ae09-986fc21cc48f.gif)
+
+### Checking Weather
+
+![React App](https://user-images.githubusercontent.com/82244776/170883833-96dd7a4b-591f-4cbb-93f7-01f13c7be0f9.gif)
+
+### Responsive Design
+
+![React App (1)](https://user-images.githubusercontent.com/82244776/170884021-97d2fc82-baf2-4ec3-ba96-722d8c4042f8.gif)
 
 ## Credits
 
@@ -34,6 +46,8 @@ Jason Barrera-Ramirez<br>
 This Project is covered by the [MIT] license
 
 ## Challenges
+
+The main challenge encountered with creating this application was creating a suitable grid layout for a responsive design while keeping a good user experience. The next challenge was setting up a global state manager in order to handle the state of the weather search and all the components that need to conditionally render.
 
 ## Technologies
 
@@ -51,7 +65,11 @@ This Project is covered by the [MIT] license
 
 ## Features
 
+This applications uses a global state managment system that is built into react known as ContextAPI, this helped with preventing prop drilling into multiple components. Another feature included was a grid layout created with css and only allowing one weather article to be opened at a time and closing all other articles when one is clicked.
+
 ## Future Development
+
+The path this application is headed would be to allow users to create an account and save searches they've made for different cities and allow for more weather data to be included in each weather article.
 
 ## How to Contribute
 
