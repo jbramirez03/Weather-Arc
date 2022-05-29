@@ -49,7 +49,6 @@ export function WeatherProvider(children) {
             );
 
             const dailyData = [];
-            console.log(returnedWeeklyData);
 
             for (let index = 0; index < 5; index++) {
                 const day = weeklyData[index + 1];
@@ -64,7 +63,6 @@ export function WeatherProvider(children) {
             }
 
             setWeekly(dailyData);
-            console.log(dailyData);
         } catch (error) {
             console.log(error)
         }
