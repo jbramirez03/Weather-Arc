@@ -328,11 +328,25 @@ body {
 .links {
   grid-area: links;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.footer-link {
+  font-size: 2em;
+}
+
+.footer-link a:visited {
+  color: inherit;
 }
 
 .copyright {
   grid-area: copyright;
+}
+
+.copyright a:visited,
+a:link {
+  color: #287dfc;
+  text-decoration: none;
 }
 
 /*/// Adjusting layout of weather grid on different screen sizes ///*/

@@ -7,7 +7,7 @@ const CurrentDay = () => {
     useEffect(() => {
         if (citySearched.name === '')
             searchHandler('New York');
-    }, [citySearched]);
+    }, [citySearched, searchHandler]);
 
 
     if (citySearched.name === '') {
